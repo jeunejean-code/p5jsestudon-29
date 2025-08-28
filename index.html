@@ -1,0 +1,40 @@
+function setup() {
+  createCanvas(400, 400);
+}
+let xjogador1 =0;
+let xjogador2 =0;
+
+function draw() {
+  ativaJogo();
+  desenhaJogadores();
+  desenhaLinhaDeChegada();
+  verificarVencedor();
+}
+  
+function ativajogo(){
+  if(focused== true){
+    background(220);
+  } else {background("rgb(238,178,178)")
+         }
+}
+  
+  
+  
+  
+  background(220);{
+  textSize(40)
+  text("🙊",xjogador1,100)
+  text("🥷",xjogador2,210)
+  rect(350,0,10,400)
+  xjogador1 = xjogador1 + random(5);
+  xjogador2 = xjogador2 + random(5); 
+  
+  if(xjogador1 >350) {
+    text("Jogador 1 VENCEU!",20,200)
+    noLoop()
+  if(xjogador2 >350) {
+    text("Jogador 2 VENCEU!",20,200)
+    noLoop()
+  }
+  }
+}
